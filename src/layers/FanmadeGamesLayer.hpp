@@ -12,6 +12,8 @@ private:
     void onUnnamed(CCObject *);
     void onLight(CCObject *);
     void onAdventure(CCObject *);
+    void onBreeze(CCObject *);
+
 public:
     static FanmadeGamesLayer *create();
     void customSetup() override;

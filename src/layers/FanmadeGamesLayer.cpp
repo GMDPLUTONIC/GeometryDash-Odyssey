@@ -88,6 +88,7 @@ void FanmadeGamesLayer::onBreeze(CCObject *sender)
     auto popup = OdysseyFangamePopup::create("Popup_GDBreeze.png"_spr, "https://gamejolt.com/games/Geometrydashbreeze/825011");
     popup->setButtonText("Download On Gamejolt!");
     popup->show();
+};
 
 FanmadeGamesLayer *FanmadeGamesLayer::create()
 {

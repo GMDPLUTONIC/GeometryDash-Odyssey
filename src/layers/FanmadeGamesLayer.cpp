@@ -27,7 +27,7 @@ void FanmadeGamesLayer::customSetup()
 
     //  GDBreeze
 
-    auto game_07 = FanmadeGamesCell::create("Promo_GDBreeze.png"_spr, this, menu_selector(FanmadeGamesLayer::OnBreeze));
+    auto game_07 = FanmadeGamesCell::create("Promo_GDBreeze.png"_spr, this, menu_selector(FanmadeGamesLayer::onBreeze));
 
     m_games->addObject(game_01);
     m_games->addObject(game_02);

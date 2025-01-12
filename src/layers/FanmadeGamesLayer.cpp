@@ -25,12 +25,17 @@ void FanmadeGamesLayer::customSetup()
     //  GDNA
     auto game_06 = FanmadeGamesCell::create("Promo_GDNA.png"_spr, this, menu_selector(FanmadeGamesLayer::onAdventure));
 
+    //  GDBreeze
+
+    auto game_07 = FanmadeGamesCell::create("Promo_GDBreeze.png"_spr, this, menu_selector(FanmadeGamesLayer::OnBreeze));
+
     m_games->addObject(game_01);
     m_games->addObject(game_02);
     m_games->addObject(game_03);
     m_games->addObject(game_04);
     m_games->addObject(game_05);
     m_games->addObject(game_06);
+    m_games->addObject(game_07);
 
     auto *listView = ListView::create(m_games, 118.0f);
     m_listLayer->addChild(listView);
@@ -39,14 +44,14 @@ void FanmadeGamesLayer::customSetup()
 void FanmadeGamesLayer::onNexitron(CCObject *sender)
 {
     auto popup = OdysseyFangamePopup::create("Popup_GDNX.png"_spr, "https://gamejolt.com/games/nexitron/797397");
-    popup->setButtonText("Play on Gamejolt!");
+    popup->setButtonText("Download on Gamejolt!");
     popup->show();
 };
 
 void FanmadeGamesLayer::onTimeReborn(CCObject *sender)
 {
     auto popup = OdysseyFangamePopup::create("Popup_GDTR.png"_spr, "https://gamejolt.com/games/timereborn/908956");
-    popup->setButtonText("Play on Gamejolt!");
+    popup->setButtonText("Download on Gamejolt!");
     popup->show();
 };
 
@@ -77,6 +82,12 @@ void FanmadeGamesLayer::onAdventure(CCObject *sender)
     popup->setButtonText("Join the Discord Server!");
     popup->show();
 };
+
+void FanmadeGamesLayer::onBreeze(CCObject *sender)
+{
+    auto popup = OdysseyFangamePopup::create("Popup_GDBreeze.png"_spr, "https://gamejolt.com/games/Geometrydashbreeze/825011");
+    popup->setButtonText("Download On Gamejolt!")
+    popup->show();
 
 FanmadeGamesLayer *FanmadeGamesLayer::create()
 {
